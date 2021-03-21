@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../../common/css/reset.css">
+	<link rel="stylesheet" href="../../common/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+	<div class="pull-down-inner">
+		<h1>Pull-Down-Menu</h1>
+		<i class="menu-icon fa fa-bars fa-2x"></i>
+	</div>
+	<nav class="pull-down-list">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Content-1</a></li>
+			<li><a href="#">Content-2</a></li>
+			<li><a href="#">Content-3</a></li>
+		</ul>
+	</nav>
+</header>
+<h1 class="theme-headline">プルダウンメニュー Sample</h1>
+
+<script src="../../common/js/jquery-2.1.1.min.js"></script>
+<script>
+$(function() {
+	$('.pull-down-list ul').hide();
+	$('.menu-icon').on('click', function() {
+		var $navList = $(this);
+		if($navList.hasClass("current")) {
+			$('.pull-down-list ul').slideUp(500,function(){
+				$navList.removeClass("current");
+			});
+		} else {
+			$('.pull-down-list ul').slideDown(500,function(){
+				$navList.addClass("current");
+			});
+		};
+		return false;
+	});
+});
+</script>
+</body>
+</html>

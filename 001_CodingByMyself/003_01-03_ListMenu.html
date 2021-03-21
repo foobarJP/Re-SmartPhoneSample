@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+  <title>ListMenu</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="./common/css/reset.css" />
+  <link rel="stylesheet" href="./common/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./common/css/01-03/style.css" />
+ </head>
+ <body>
+  <nav class="drill-down">
+   <ul class="menu theme-drill">
+    <!-- to home button -->
+    <li><a href="#">Home</a></li>
+    <li>
+     <!-- top category -->
+     <a class="menu-item">Categories</a>
+     <!-- list of menus of top category-->
+     <ul class="menu-child">
+      <!-- open the submenu of MarkUp-->
+      <li>
+       <a class="menu-item">Markup</a>
+       <!-- menus of MarkUp -->
+       <ul class="menu-child">
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">XML</a></li>
+        <li><a href="#">MarkDown</a></li>
+       </ul>
+      </li>
+      <!-- open the submenu of StyleSheet -->
+      <li>
+       <a class="menu-item">Style Sheets</a>
+       <!-- menus of StyleSheet -->
+       <ul class="menu-child">
+        <li><a href="#">User Agent Style Sheets</a></li>
+        <li><a href="#">Cascading Style Sheets</a></li>
+        <li><a href="#">User Style Sheets</a></li>
+       </ul>
+       
+      <!-- button of opening the submenu of Script category -->
+      <li>
+       <a class="menu-item">Script</a>
+        <ul class="menu-child">
+         <!-- list of submenu of Script category -->
+         <li><a href="#">JavaScript</a></li>
+         </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </nav>
+  <!-- loading jQuery-->
+  <script src="./common/js/jquery-2.1.1.min.js"></script>
+  <script>
+   $(function() {
+    /* When clicking top menu, 
+       changing drill-down box size to as 
+       height as corespponding submenu. */
+    $('.menu-item').on('click', function() {
+     let menuChild = $(this).next('.menu-child');
+     $('.drill-down').height(menuChild.height());
+     menuChild.addClass('is-active');
+    });
+    /* create back button */
+    $('.menu-child').prepend('<li class="js-item-back"><a>Back</a></li>');
+    /* implementing back button's behavior */
+    $('.js-item-back').on('click', function() {
+     let parentEle = $(this).parent();
+     parentEle.removeClass('is-active');
+     $('.drill-down').height(pa12rentEle.parent().parent().height());
+    });
+   });
+  </script>
+ </body>
+</html>

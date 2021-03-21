@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Tab Panel Self Sample</title>
+ <link rel="stylesheet" href="./common/css/reset.css" />
+ <link rel="stylesheet" href="./common/css/font-awesome.min.css" />
+ <link rel="stylesheet" href="./common/css/04-18/style.css" />
+
+</head>
+<body>
+ <div class="tabpanel">
+  <nav>
+   <ul class="tablist">
+    <li class="is-active"><a href="#tab1">Tab1</a></li>
+    <li><a href="#tab2">Tab2</a></li>
+    <li><a href="#tab3">Tab3</a></li>
+    <li><a href="#tab4">Tab4</a></li>
+   </ul>
+  </nav>
+  <main>
+   <div id="tab1">
+    <div class="meaningless"></div>
+    <p>おこりんぼうNo1</p>
+   </div>
+   <div id="tab2">
+    <div class="meaningless"></div>
+    <p>なきんぼうNo2</p>
+   </div>
+   <div id="tab3">
+    <div class="meaningless"></div>
+    <p>びっくりぎょうてんNo4</p>
+   </div>
+   <div id="tab4">
+    <div class="meaningless"></div>
+    <p>どっこいしょNo4</p>
+   </div>
+  </main>
+ </div>
+ <script src="./common/js/jquery-2.1.1.min.js"></script>
+ <script>
+  $(function() {
+   $('.tabpanel a').on('click', function(e) {
+    let id = $(this).attr('href');
+    $('.tabpanel div').hide();
+    $('.tabpanel .meaningless').show();
+    $('.tabpanel').find(id).show();
+    $('.tabpanel li').removeClass('is-active');
+    $(this).parent().addClass('is-active');
+    return false;
+  });
+ });
+ </script>
+ 
+</body>
+</html>

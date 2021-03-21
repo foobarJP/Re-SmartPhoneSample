@@ -1,0 +1,39 @@
+body {
+  font-family: Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+header {
+  width: 100%;
+  padding: 15px;
+  background: #01579b;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 1.5;
+  margin: 15px;
+}
+
+.main-content p {
+  margin: 15px;
+  line-height: 1.5;
+}
+
+.drawer-btn a {
+  color: #fafafa;
+}
+
+.drawerList li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #212121;
+}
+
+.drawerList li:nth-child(odd) {
+  background: #e1f5fe;
+}
+.drawerList li:nth-child(even) {
+  background: #4fc3f7;
+}

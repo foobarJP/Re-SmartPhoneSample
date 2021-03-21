@@ -1,0 +1,49 @@
+
+body {
+    -webkit-text-size-adjust: 100%;
+    font-family: Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+}
+.theme-headline {
+    font-size: 32px;
+    line-height: 1.5;
+    margin: 15px;
+}
+.theme-sub-headline {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 15px;
+    color: #757575;
+}
+
+.offleft {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+}
+
+.breadcrumb {
+    font-size: 12px;
+    margin: 10px 0;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.breadcrumb li {
+    padding: 6px;
+    display: inline-block;
+}
+.breadcrumb li a {
+    text-decoration: none;
+}
+.breadcrumb li a:after {
+    content: "\00003E";
+    font-family: fontAwesome;
+    color: #757575;
+    margin: 0 0 0 12px;
+    vertical-align: 1px;
+}
+
+.breadcrumb .icon-arrow a:after {
+    font-family: fontAwesome;
+    content: '\f105';
+}

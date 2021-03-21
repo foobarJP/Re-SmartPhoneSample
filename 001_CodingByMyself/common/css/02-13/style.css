@@ -1,0 +1,106 @@
+html {
+ font-family: Roboto, sans-serif;
+ font-size: 16px;
+}
+
+h1 {
+ font-size: 2rem;
+ line-height: 1.5;
+ margin: 15px;
+}
+
+section p {
+ font-size: 1.75;
+ line-height: 1.5;
+ margin: 15px;
+}
+
+.share {
+ width: 300px;
+ height: 50px;
+ margin: 0 auto;
+}
+
+.share .flex-container {
+ display: flex;
+ flex-flow: row;
+ align-items: center;
+ justify-content: space-around;
+ width: inherit;
+ height: inherit;
+}
+
+
+.share li {
+ flex: none;
+ font-size: 30px;
+ line-height: 44px;
+ width: 50px;
+ height: 50px;
+ box-sizing: border-box;
+}
+
+.share a {
+ display: block;
+ transition: all 0.3s;
+ color: white;
+ border-radius: 50%;
+ text-align: center;
+}
+
+.share .sharebtn1 {
+ border: solid 3px #2795e9;
+ border-radius: 50%;
+
+}
+
+.share .sharebtn-bg1 {
+ background-color: #55acee;
+ box-shadow: 0 0 0 1px #55acee;
+}
+
+.share .sharebtn-bg1.is-active {
+ background-color: #83c3f3;
+}
+
+.share .sharebtn2 {
+ border: solid 3px #243670;
+ border-radius: 50px;
+}
+
+.share .sharebtn-bg2 {
+ background-color: #315096;
+ box-shadow: 0 0 0 1px #315096;
+}
+
+.share .sharebttn2-bg2.is-active {
+ background-color: #3e65bc;
+}
+
+.share .sharebtn3 {
+ border: solid 3px #c23221;
+ border-radius: 50px
+}
+
+.share .sharebtn-bg3 {
+ background-color: #dd4b39;
+ box-shadow: 0 0 0 1px #dd4b39;
+}
+
+.share .sharebtn3.is-active {
+ background-color: #e47365;
+}
+
+.share .sharebtn4 {
+ border: solid 3px #9e0c13;
+ border-radius: 50px;
+}
+
+.share .sharebtn-bg4 {
+ background-color: #ce0f19;
+ box-sizing: 0 0 0 1px ce0f19;
+}
+
+.share .sharebtn-bg4.is-active {
+ background-color: #ef212c;
+}

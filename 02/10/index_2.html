@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>パンくずリスト サンプル</title>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../../common/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../common/css/reset.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style_2.css">
+    </head>
+    <body>
+        <h1 class="theme-headline">パンくずリスト Sample</h1>
+        <ol class="breadcrumb">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#category">カテゴリー</a></li>
+            <li><a href="#category-subcategory">カテゴリー</a></li>
+            <li><a href="#category-subcategory-child">カテゴリー</a></li>
+            <li><a href="#category-tag">タグ</a></li>
+            <li><span>個別記事</span></li>
+        </ol>
+        <script src="../../common/js/jquery-2.1.1.min.js"></script>
+        <script>
+        $(function () {
+            var $window = $(window);
+
+            $window.on('orientationchange load', function () {
+                var $breadcrumb = $('.breadcrumb');
+                var $item;
+
+                var getBreadcrumbWidth = function () {
+                    var totalWidth = 0;
+                    $breadcrumb.find('li').filter(function () {
+                        return !$(this).hasClass('is-hide');
+                    }).each(function () {
+                        totalWidth += $(this).outerWidth(true);
+                    });
+
+                    return totalWidth;
+                };
+
+                var windowWidth = $window.outerWidth(true);     // 画面の横幅を取得
+                var breadcrumbWidth = getBreadcrumbWidth(); // パンくずの横幅を取得
+
+                var lastUrl = null;
+
+                $breadcrumb.find('li').removeClass('is-hide');
+                $breadcrumb.find('.js-breadcrumb-omission').remove();
+
+                // パンくずの横幅が、画面幅を超えていたら省略処理を実行する
+                if (windowWidth < breadcrumbWidth) {
+                    // 最後のli要素の前に省略要素を追加する
+                    $breadcrumb.find('li').last().before('<li class="js-breadcrumb-omission"><a href="' + lastUrl + '">・・・</a></li>');
+
+                    while (windowWidth < breadcrumbWidth) {
+
+                        $item = $breadcrumb.find('li').filter(function () {
+                            return !$(this).hasClass('is-hide');
+                        });
+
+                        lastUrl = $item.find('a').eq($item.find('a').length - 2).attr('href');
+                        $('.js-breadcrumb-omission a').attr('href', lastUrl);
+
+                        $item.eq($item.length - 3).addClass('is-hide');
+
+                        // breadcrumbWidthの横幅をアップデート
+                        breadcrumbWidth = getBreadcrumbWidth();
+
+                    }
+                }
+            });
+        });
+        </script>
+    </body>
+</html>

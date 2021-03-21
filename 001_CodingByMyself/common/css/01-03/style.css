@@ -1,0 +1,53 @@
+body {
+ font-family: Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.drill-down {
+ overflow: hidden;
+ position: relative;
+}
+.menu {
+ width: 100%;
+}
+.menu-child {
+ position: absolute;
+ top: 0;
+ left: 100%;
+ width: 100%;
+ background-color: #fafafa;
+ transition: left 0.3s;
+}
+.menu-child.is-active {
+ left: 0;
+}
+
+/* theme */
+.theme-drill,
+.theme-drill .menu-child {
+ background-color: #212121; 
+}
+.theme-drill a {
+ display: block;
+ padding: 20px 15px;
+ border-bottom: 1px solid #333;
+ color: #fafafa;
+ cursor: pointer;
+}
+.theme-drill a::after{
+ font-family: FontAwesome;
+ content: "\f138";
+ float: right;
+ color: #e0e0e0;
+}
+.thema-drill a[href]::after {
+ content: '';
+}
+.theme-drill a:active,
+.theme-drill a:active::after {
+ color: #ffb74b;
+}
+.theme-drill .js-item-back a {
+ background-color: #757575;
+}
+.theme-drill .js-item-back a::after {
+ background-color: #757575;
+}

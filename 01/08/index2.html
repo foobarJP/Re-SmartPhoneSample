@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimal-ui initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>サークルナビゲーション</title>
+  <link rel="stylesheet" href="../../common/css/reset.css">
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <h1>サークルナビゲーションUI Sample</h1>
+  <section>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit asperiores expedita itaque minima, odit iure doloremque vel modi debitis eius. Ex at error, laborum inventore facilis earum vitae et pariatur.</p>
+  </section>
+  <nav class="circle-nav theme-circle-nav">
+    <ul>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">6</a></li>
+      <li><a href="#">7</a></li>
+      <li><a href="#">8</a></li>
+      <li><a href="#">9</a></li>
+      <li><a href="#">10</a></li>
+    </ul>
+    <p class="open-circle"><span>+</span></p>
+  </nav>
+
+<script src="../../common/js/jquery-2.1.1.min.js"></script>
+<script>
+  $(function(){
+    $(".open-circle").on("click",function(){
+      $(".circle-nav ul").stop().fadeToggle();
+    });
+  });
+</script>
+</body>
+</html>

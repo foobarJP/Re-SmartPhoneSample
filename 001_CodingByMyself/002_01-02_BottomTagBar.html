@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+  <title>BottomTabBarSample</title>
+  <meta charset="utf-8" />
+  <meta nema="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto" />
+  <link rel="stylesheet" href="common/css/reset.css" />
+  <link rel="stylesheet" href="common/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="common/css/01-02/style.css" />
+ </head>
+ <body>
+  <main id="wrapper">
+   <h1>最下部のタブバーサンプル</h1>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+  </main>
+  <nav class="tab-bar">
+   <ul>
+    <li>
+     <!-- ホームボタン -->
+     <a href="#">
+      <i class="fa fa-home"></i>
+      <span class="category-name">ホーム</span>
+     </a>
+    </li>
+    <li>
+     <!-- 検索ボタン -->
+     <a href="#">
+      <i class="fa fa-search"></i>
+      <span class="category-name">検索</span>
+     </a>
+    </li>
+    <li>
+     <!-- カート -->
+     <a href="#">
+      <i class="fa fa-shopping-cart"></i>
+      <span class="category-name">カート</span>
+     </a>
+    </li>
+    <li>
+     <!-- ログイン -->
+     <a href="#">
+      <i class="fa fa-key fa-rotate-270"></i>
+      <span class="category-name">ログイン</span>
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <!-- jQueryインポート -->
+  <script src="common/js/jquery-2.1.1.min.js"></script>
+  <!-- iScrollインポート -->
+  <script src="common/js/iscroll.js"></script>
+  <script>
+   $(function() {
+    let myScroll = new iScroll('#wrapper');
+   });
+  </script>
+  </body>
+</html>

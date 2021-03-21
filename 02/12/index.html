@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>ドラッグアンドドロップ サンプル</title>
+        <link rel="stylesheet" href="../../common/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../common/css/reset.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="theme-headline">ドラッグアンドドロップ sample</h1>
+            <div id="photo">
+                <div class="group">
+                    <div class="group-list">
+                        <img src="http://placehold.it/100x100/111.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/222.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/333.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/444.jpg" width="50" height="50" alt="">
+                    </div>
+                </div>
+
+                <div class="group">
+                    <div class="group-list">
+                        <img src="http://placehold.it/100x100/111.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/222.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/333.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/444.jpg" width="50" height="50" alt="">
+                    </div>
+                </div>
+
+                <div class="group">
+                    <div class="group-list">
+                        <img src="http://placehold.it/100x100/111.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/222.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/333.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/444.jpg" width="50" height="50" alt="">
+                    </div>
+                </div>
+
+                <div class="group">
+                    <div class="group-list">
+                        <img src="http://placehold.it/100x100/111.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/222.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/333.jpg" width="50" height="50" alt="">
+                        <img src="http://placehold.it/100x100/444.jpg" width="50" height="50" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="Sortable.js"></script>
+        <script>
+        var pageLists = document.getElementById('photo').getElementsByClassName('group-list');
+
+        for (var i = 0, length = pageLists.length; i < length; i += 1) {
+            new Sortable(pageLists[i], {
+                group: 'photo'
+            });
+        }
+        </script>
+    </body>
+</html>

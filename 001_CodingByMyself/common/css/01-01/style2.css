@@ -1,0 +1,29 @@
+body {
+ font-family: Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+ font-size: 14px;
+}
+
+.header {
+ position: relative;
+ height: 40px;
+ border-bottom: 1px solid #e0e0e0;
+ background-color: #607d8b;
+}
+
+.header-title {
+ text-align: center;
+ padding: 10px 0 0;
+ font-size: 18px;
+ color: #fafafa;
+}
+
+.header-hamburger-btn {
+ position: absolute;
+ top: 50%;
+ margin-top: -10px;
+ right: 15px;
+ font-size: inherit;
+ background-color: transparent;
+ border-color: transparent;
+ }
+

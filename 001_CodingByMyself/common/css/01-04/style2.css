@@ -1,0 +1,62 @@
+body {
+ font-family: "MS Pゴシック", sans-serif;
+}
+
+h1 {
+ font-size: 32px;
+ font-weight: bold;
+ margin: 15px;
+}
+
+#wrapper {
+ margin: 0 15px;
+ font-size: 16px;
+ width: 30%;
+}
+.accordion-menu dt {
+ border: 1px solid #90a4ae;
+ background-color: #eceff1;
+ position: relative;
+}
+
+.accordion-menu a {
+ color: #01579b;
+ font-size: inherit;
+ display: block;
+ text-decoration: none;
+ padding: 10px 15px;
+}
+
+.accordion-menu a.is-close::after {
+ font-family: 'FontAwesome';
+ content: '\f078';
+ position: absolute;
+ top: 50%;
+ transform: translate3d(-50%,-50%, 0);
+ right: 5px;
+}
+
+.accordion-menu a.is-open::after {
+ font-family: 'FontAwesome';
+ content: '\f077';
+ position: absolute;
+ top: 50%;
+ transform: translate3d(-50%,-50%, 0);
+ right: 5px;
+}
+
+.according-menu a.is-open::after {
+ font-family: 'FontAwesome';
+ content: '\f077';
+ position: absolute;
+ top: 50%;
+ transform: translate3d(-50%,-50%, 0);
+ right: 5px;
+}
+
+.accordion-menu li {
+ border: 1px solid #90a4ae;
+ background-color: #eeddee;
+ color: #000000;
+ padding: 10px;
+}

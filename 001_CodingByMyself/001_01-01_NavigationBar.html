@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Navigation Bar</title>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto" />
+  <link rel="stylesheet" href="./common/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./common/css/reset.css" />
+  <link rel="stylesheet" href="./common/css/01-01/style.css" />
+ </head>
+ <body>
+  <div class="container">
+   <header id="header"> <!-- ヘッダーナビゲーションメニュー -->
+    <h1 class="header-title">
+     <a href="/">dummy-logo</a>
+    </h1>
+    <a href="#dummy" class="header-prevbtn">戻る</a>
+    <button class="header-searchbtn">
+     <i class="fa fa-search"></i> <!-- 虫眼鏡の検索ボタン -->
+    </button>
+    <button class="header-navbtn"><!-- ハンバーガーメニューバー -->
+     <i class="fa fa-bars"></i>
+    </button>
+   </header>
+   <nav id="nav"> <!-- ハンバーガーメニュータップ時のリスト -->
+    <button class="nav-closebtn fa fa-times">
+    </button> <!-- メニューを閉じるペケボタン -->
+    <ul>
+     <li><a href="#dummy">Home</a></li>
+     <li><a href="#dummy">Content-1</a></li>
+     <li><a href="#dummy">Content-2</a></li>
+     <li><a href="#dummy">Content-3</a></li>
+     <li><a href="#dummy">Content-4</a></li>
+     <li><a href="#dummy">Content-5</a></li>
+     <li><a href="#dummy">Content-6</a></li>
+    </ul>    
+   </nav>
+   <main id="main"> <!-- サイトのメインコンテンツ -->
+    <h1 class="theme-headline">ナビゲーションバー sample</h1>
+    <section class="section">
+     <h2 class="section-heading">sample見出し</h2>
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+       aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+       cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.
+     </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+        culpa qui officia deserunt mollit anim id est laborum.
+     </p>
+    </section>
+   </main>
+  </div>
+  <script src="./common/js/jquery-2.1.1.min.js"></script>
+  <script>
+   /* code here some code */
+    $(function () {
+     $('.header-navbtn, .nav-closebtn').on(
+      'click', function () {
+       $('#nav').toggleClass('is-open');
+      });
+    });
+  </script>
+ </body>
+</html>

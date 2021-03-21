@@ -1,0 +1,27 @@
+body {
+ font-family: Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+ font-family: 14px;
+}
+
+.header {
+ position: relative;
+ background-color: #607d8b;
+ border-bottom: #e0e0e0 1px solid;
+ height: 40px;
+}
+
+.header-textlogo {
+ text-align: center;
+ padding: 11px 0 11px;
+ font-size: 18px;
+ font-weight: bold;
+ color: #fafafa;
+} 
+
+.header-nav-humburgerbtn {
+ position: absolute;
+ right: 15px;
+ bottom: 8px;
+ background: transparent;
+ border-color: transparent;
+}

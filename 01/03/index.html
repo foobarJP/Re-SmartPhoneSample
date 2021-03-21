@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width">
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../../common/css/reset.css">
+  <link rel="stylesheet" href="../../common/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="drill-down">
+  <ul class="menu theme-drill">
+    <li><a href="/">Home</a></li>
+    <li>
+      <a class="menu-item">Categories</a>
+      <ul class="menu-child">
+        <li>
+          <a class="menu-item">Markup</a>
+          <ul class="menu-child">
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">XML</a></li>
+            <li><a href="#">Markdown</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="menu-item">Style Sheets</a>
+          <ul class="menu-child">
+            <li><a href="#">User Agent Style Sheets</a></li>
+            <li><a href="#">Cascading Style Sheets</a></li>
+            <li><a href="#">User Style Sheets</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="menu-item">Script</a>
+          <ul class="menu-child">
+            <li><a href="#">JavaScript</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+<script src="../../common/js/jquery-2.1.1.min.js"></script>
+<script>
+$(function() {
+  $('.menu-item').on('click', function() {
+    var menuChild = $(this).next('.menu-child');
+    $('.drill-down').height(menuChild.height());
+    menuChild.addClass('is-active');
+  });
+
+  $('.menu-child').prepend('<li class="js-item-back"><a>Back</a></li>');
+  
+  $('.js-item-back').on('click', function() {
+    var parentEle = $(this).parent();
+    parentEle.removeClass('is-active');
+    $('.drill-down').height(parentEle.parent().parent().height());
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carousel Panel</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+  <link rel="stylesheet" href="./common/css/reset.css" />
+  <link rel="stylesheet" href="./common/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./common/css/slick.css" />
+  <style>
+   .carousel-ui img {
+    width: 100%;
+   }
+  </style>
+ </head>
+
+ <body>
+  <div class="carousel-ui">
+   <div><img src="./common/img/sample_1.jpg" /></div>
+   <div><img src="./common/img/sample_2.jpg" /></div>
+   <div><img src="./common/img/sample_3.jpg" /></div>
+  </div>
+  
+  <script src="./common/js/jquery-2.1.1.min.js"></script>
+  <script src="./common/js/slick.min.js"></script>
+  <script>
+   $(function() {
+    $('carousel-ui').slick();
+   });
+  </script>
+ </body>
+</html>

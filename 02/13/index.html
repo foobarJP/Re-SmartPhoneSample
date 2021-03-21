@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimal-ui initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>シェアボタン</title>
+  <link rel="stylesheet" href="../../common/css/reset.css">
+  <link rel="stylesheet" href="../../common/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>シェアボタンUI Sample</h1>
+  <section>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit asperiores expedita itaque minima, odit iure doloremque vel modi debitis eius. Ex at error, laborum inventore facilis earum vitae et pariatur.</p>
+  </section>
+  <div class="share theme-share">
+    <ul>
+      <li class="sharebtn1"><a href="#" class="sharebtn-bg1"><i class="fa fa-twitter"></i></a></li>
+      <li class="sharebtn2"><a href="#" class="sharebtn-bg2"><i class="fa fa-facebook"></i></a></li>
+      <li class="sharebtn3"><a href="#" class="sharebtn-bg3"><i class="fa fa-google-plus"></i></a></li>
+      <li class="sharebtn4"><a href="#" class="sharebtn-bg4"><i class="fa fa-pinterest"></i></a></li>
+    </ul>
+  </div>
+  <!--
+    SNSリンクURL
+    //Twitter
+    <a href="http://twitter.com/home?status=<ツイートの内容>" target="_blank"></a>
+    //Facebook
+    <a href="https://www.facebook.com/sharer/sharer.php?u=<URL>" target="_blank"></a>
+    //google+
+    <a href="https://plusone.google.com/_/+1/confirm?hl=ja&url=<URL>" target="_blank"></a>
+    //Pinterest
+    <a href="http://pinterest.com/pin/create/button/?url=<URL>&media=ここに画像URL&description=ここにテキスト" target="_blank"></a>
+    //はてなブックマーク
+    <a href="http://b.hatena.ne.jp/add?mode=confirm&url=<URL>&title=ページタイトル">はてブ</a>
+    //Pocket
+    <a href="http://getpocket.com/edit?url=<URL>&title=ページタイトル" onclick="window.open(this.href, 'FBwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;">Pocket</a>
+  -->
+<script src="../../common/js/jquery-2.1.1.min.js"></script>
+<script>
+  $(function(){
+    $(".share a").on("touchstart", function(){
+      $(".share a").removeClass("is-active");
+      $(this).addClass("is-active");
+    });
+  });
+</script>
+</body>
+</html>

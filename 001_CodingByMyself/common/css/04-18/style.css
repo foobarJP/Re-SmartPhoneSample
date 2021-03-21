@@ -1,0 +1,78 @@
+html {
+ font-family: "MS Pゴシック", sans-serif;
+ font-size: 16px;
+}
+
+nav ul.tablist {
+ /* size */
+ width: 280px;
+ height: 40px;
+ /* make flex-container */
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ /* color, border and so on */
+ background-color: #e0f2f1;
+}
+
+li {
+ /* size */
+ width: 70px;
+ height: 40px;
+ box-sizing: border-box;
+ /* color and so on */
+ color: #999999;
+ position: relative;
+}
+
+li.is-active {
+ background-color: #4db6ac;
+}
+
+li.is-active a {
+ color: #ffffff;
+}
+
+nav li a {
+ display: inline-block;
+ text-decoration: none;
+ text-align: center;
+ color: #999999;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate3d(-50%, -50%, 0);
+}
+
+nav li + li {
+ border-left: solid 1px #e0e0e0;
+}
+
+main {
+ width: 600px;
+ height: 500px;
+ position: relative;
+}
+
+main > div {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+}
+
+main > div > .meaningless {
+ float: left;
+ width: 100px;
+ height: 100px;
+ background-color: orange;
+}
+
+main > div > .meaningless::after {
+ content: '';
+ clear: both;
+}
+
+.tabpanel main > div:nth-of-type(n+2) {
+ display: none;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ナビゲーションバー サンプル</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../common/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../common/css/reset.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ <div class="container">
+  <header class="header">
+   <h1 class="header-title">
+    <a href="/">dummy-logo</a>
+   </h1>
+   <a href="#dummy" class="header-prevbtn">戻る</a>
+   <button class="header-navbtn fa fa-bars">
+    <span class="offleft">メニューを開く</span>
+   </button>
+   <button class="header-searchbtn">
+   <i class="f fa-search"></i><span class="offleft">検索する</span>
+    </button>
+  </header>
+  <nav class="nav">
+   <button class="nav-closebtn fa fa-times">
+     <span class="offleft">メニューを閉じる</span>
+   </button>
+   <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Content-1</a></li>
+    <li><a href="#">Content-2</a></li>
+    <li><a href="#">Content-3</a></li>
+    <li><a href="#">Content-4</a></li>
+    <li><a href="#">Content-5</a></li>
+    <li><a href="#">Content-6</a></li>
+    <li><a href="#">Content-7</a></li>
+   </ul>
+  </nav>
+  <div class="main">
+
+  </div>
+    </div>
+    <script src="../../common/js/jquery-2.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $('.header-navbtn, .nav-closebtn').on('click', function () {
+                $('.nav').toggleClass('is-open');
+            });
+        });
+    </script>
+</body>
+
+</html>

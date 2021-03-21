@@ -1,0 +1,125 @@
+body {
+ -webkit-text-size-adjust: 100%;
+ font-family: Roboto, Arial, "hyelvetica Neue", Helvetica, sans-serif;
+ font-size: 14px;
+}
+
+/* 上部のナビゲーションメニュー */
+#header {
+ position: relative;
+ height: 40px;
+ border-bottom: 1px solid #e0e0e0;
+ background: #607d8b;
+}
+
+.header-title {
+ text-align: center;
+ padding: 10px 0 0;
+}
+
+.header-title a {
+ text-decoration: none;
+ font-size: 18px;
+ color: #fafafa;
+}
+
+/* ナビゲーションバーの戻るボタン*/
+.header-prevbtn {
+ position: absolute;
+ top: 10px;
+ left: 20px;
+ /* decorating button */
+ padding: 5px;
+ font-size: 12px;
+ display: inline-block;
+ border: 0;
+ border-left: 0;
+ border-radius: 0 4px 4px 0;
+ background: #eceff1;
+ color: #212121;
+ text-decoration: none;
+}
+.header-prevbtn::before {
+ position: absolute;
+ top: 0;
+ left: -16px;
+ border: 11px solid transparent;
+ border-left-width: 8px;
+ border-right-width: 8px;
+ border-right-color: #eceff1;
+ content: '';
+}
+
+/* serach button lie on the top menu bar */
+/* associated with button tag!           */
+.header-searchbtn {
+ position: absolute;
+ top: 10px;
+ right: 40px;
+ border: 0;
+ background: none;
+ font-size:15px;
+ color: #212121;
+}
+/* humberger button ontop menu bar */
+/* associated with button tag!     */
+.header-navbtn {
+ position: absolute;
+ top: 11px;
+ right: 14px;
+ display: block;
+ /*
+ width: 40px;
+ height: 40px;
+ */
+ font-size: 15px;
+ background: 0;
+ border: 0;
+ padding:0;
+}
+#nav {
+ width: 100%;
+ position: fixed;
+ top: 0;
+ bottom: 0;
+ background: rgba(0, 0, 0, .75);
+ overflow: auto;
+ display: none; /* nav element is  nothing displaying  */
+}
+#nav.is-open {
+ display: block;
+}
+#nav .nav-closebtn {
+ position: fixed;
+ top: 20px;
+ right: 20px;
+ color: #ffffff;
+ background: transparent;
+ border: 0;
+}
+#nav ul {
+ padding: 40px 0;
+}
+#nav li {
+ padding: 10px 0 10px 20px;
+}
+#nav a {
+ color:#ffffff;
+}
+
+#main .theme-headline {
+ font-size: 32px;
+ line-height: 1.5;
+ margin: 15px;
+}
+
+#main .section {
+ margin: 30px 20px 0;
+}
+#main .section .section-heading {
+ font-size: 18px;
+}
+#main .section p {
+ margin: 1em 0 0;
+ line-height: 1.4;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine" />
+  <link rel="stylesheet" href="./common/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./common/css/reset.css" />
+  <link rel="stylesheet" href="./common/css/01-02/style2.css" />
+ </head>
+ <body>
+  <main class="main">
+   <h1>Noncommutative Noetherian Ring</h1>
+   <p>In mathematics, more specifically in the area of abstract algebra known as ring theory, a Noetherian ring is a ring that satisfies the ascending chain condition on left and right ideals; that is, given any increasing sequence of left (or right) ideals:
+
+    there exists a natural number n such that:
+    
+    Noetherian rings are named after Emmy Noether.
+    
+    The notion of a Noetherian ring is of fundamental importance in both commutative and noncommutative ring theory, due to the role it plays in simplifying the ideal structure of a ring. For instance, the ring of integers and the polynomial ring over a field are both Noetherian rings, and consequently, such theorems as the Lasker–Noether theorem, the Krull intersection theorem, and Hilbert's basis theorem hold for them. Furthermore, if a ring is Noetherian, then it satisfies the descending chain condition on prime ideals. This property suggests a deep theory of dimension for Noetherian rings beginning with the notion of the Krull dimension.
+
+    Try setting the height of the html element to 100% as well.
+
+html, 
+body {
+    height: 100%;
+}
+Body looks to its parent (HTML) for how to scale the dynamic property, so the HTML element needs to have its height set as well.
+
+However the content of body will probably need to change dynamically. Setting min-height to 100% will accomplish this goal.
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+Share
+Improve this answer
+Follow
+edited Sep 27 '19 at 15:33
+
+Nick Heiner
+107k173173 gold badges452452 silver badges687687 bronze badges
+answered Jul 11 '11 at 18:53
+
+BentOnCoding
+23.4k1010 gold badges5757 silver badges9292 bronze badges
+6
+thanks, this seem to remove the white bar on short pages, but now on pages which height exceeds the browser window height I get a 20px white bar at the bottom :| – bodyofheat Jul 11 '11 at 19:01
+57
+ok I found out! it works if I add html,body{min-height:100%;} :D – bodyofheat Jul 11 '11 at 19:32
+14
+Note: if you use the body {min-height} version then you cannot use .body-child{height: 100%} trick. – Salman A Dec 6 '14 at 9:52
+17
+best answer is with CSS3, using vh -> body { height: 100vh } - check answer here stackoverflow.com/a/25829844/2680216 – Adriano Resende Oct 2 '15 at 17:53
+2
+@bFunc I have this chrome issue to. html{height:100%;} body {height:auto} do the job. – GBMan Apr 13 '16 at 8:49
+Show 12 more comments
+
+Report this ad
+
+240
+
+As an alternative to setting both the html and body element's heights to 100%, you could also use viewport-percentage lengths.
+
+5.1.2. Viewport-percentage lengths: the ‘vw’, ‘vh’, ‘vmin’, ‘vmax’ units
+
+The viewport-percentage lengths are relative to the size of the initial containing block. When the height or width of the initial containing block is changed, they are scaled accordingly.
+
+In this instance, you could use the value 100vh - which is the height of the viewport.
+
+Example Here
+
+   </p>
+  </main>
+
+  <nav class="nav-tabbar">
+   <ul>
+    <li>
+     <a href="#">
+      <i class="fa fa-home"></i>
+      <span class="category-name">ホーム</span>
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      <i class="fa fa-search"></i>
+      <span class="category-name">検索</span>
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      <i class="fa fa-shopping-cart"></i>
+      <span class="category-name">カート</span>
+     </a>
+    </li>
+    <li>
+     <a href="#">
+      <i class="fa fa-key fa-rotate270"></i>
+      <span class="category-name">ログイン</span>
+     </a>
+    </li>
+   </ul>
+  </nav>
+ 
+ </body>
+</html>

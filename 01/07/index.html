@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../../common/css/reset.css">
+	<link rel="stylesheet" href="../../common/css/font-awesome.min.css">
+	<link rel="stylesheet" href="jquery.slidemenu.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+	<header>
+		<div class="drawer-btn">
+			<a href="#"><i class="menu-icon fa fa-bars fa-2x"></i></a>
+		</div>
+	</header>
+
+	<main class="main-content">
+		<h1>スライドメニュー Sample</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</main>
+</div>
+
+<nav id="slidemenu">
+	<div id="slidemenu_contents">
+		<ul class="drawerList">
+			<li><a href="#">HOME</a></li>
+			<li><a href="#">Content-1</a></li>
+			<li><a href="#">Content-2</a></li>
+			<li><a href="#">Content-3</a></li>
+			<li><a href="#">Content-4</a></li>
+		</ul>
+	</div>
+</nav>
+
+
+
+<script src="../../common/js/jquery-2.1.1.min.js"></script>
+<script src="jquery.slidemenu.js"></script>
+<script>
+$(function() {
+	$(".drawer-btn a").slideMenu({
+		main_contents: "#container",
+		menu: "#slidemenu",
+		menu_contents: "#slidemenu_contents",
+		menu_list: ".drawerList",
+		bottom_margin: 150
+	});
+});
+</script>
+</body>
+</html>
