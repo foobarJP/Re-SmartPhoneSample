@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimal-ui initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>横スクロールコンテンツ</title>
+  <link rel="stylesheet" href="../../common/css/reset.css">
+  <link rel="stylesheet" href="../../common/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+<h1>横スクロールコンテンツUI Sample</h1>
+<div class="scroll-wrapper">
+  <div class="horizontal-scroll theme-horizontal-scroll">
+    <div class="scroll-wrap">
+      <div class="contents">
+        <img src="http://www.placehold.it/240x240">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+      <div class="contents">
+        <img src="http://www.placehold.it/240x240">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+      <div class="contents">
+        <img src="http://www.placehold.it/240x240">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+      <div class="contents">
+        <img src="http://www.placehold.it/240x240">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+      <div class="contents">
+        <img src="http://www.placehold.it/240x240">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+      <div class="contents">
+        <img src="http://www.placehold.it/240x240">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+      <div class="contents">
+        <img src="http://www.placehold.it/240x240">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../../common/js/jquery-2.1.1.min.js"></script>
+<script>
+$(function(){
+  var $contents = $(".scroll-wrap .contents"),
+      contentsWid = $contents.outerWidth(true),
+      contentsLen = $contents.length;
+  $(".scroll-wrap").width(contentsWid * contentsLen);
+});
+</script>
+</body>
+</html>

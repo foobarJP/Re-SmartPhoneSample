@@ -1,0 +1,57 @@
+h1 {
+  font-size: 32px;
+  line-height: 1.5;
+  margin: 15px;
+}
+
+.tabpanel ul {
+  display: table;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.tabpanel li {
+  display: table-cell;
+  background: #e0f2f1;
+}
+.tabpanel li.is-active {
+  background: #4db6ac;
+}
+.tabpanel li.is-active a {
+  color: #fff;
+}
+.tabpanel div:nth-of-type(n+2) {
+  display: none;
+}
+
+/* theme-tabpanel */
+.theme-tabpanel {
+  margin: 10px;
+}
+.theme-tabpanel li {
+  text-align: center;
+}
+.theme-tabpanel li + li {
+  border-left: solid 1px #e0e0e0;
+}
+.theme-tabpanel li a {
+  display: block;
+  color: #999;
+  padding: 10px;
+  text-decoration: none;
+}
+.theme-tabpanel div {
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 10px;
+  background: #eceff1;
+  overflow: hidden;
+}
+.theme-tabpanel div img {
+  float: left;
+}
+.theme-tabpanel div p {
+  padding-left: 10px;
+  overflow: hidden;
+}

@@ -1,0 +1,79 @@
+@charset "UTF-8";
+html {
+  background: #fff3e0;
+}
+
+body {
+  font-family: "メイリオ", Meiryo, sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 1.5;
+  margin: 15px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+section p {
+  color: #777;
+  margin: 10px;
+}
+
+.card:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.card .box {
+  float: left;
+  width: 43%;
+  background: #fff;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-shadow: 0 1px 3px 0 #e0e0e0;
+  -webkit-box-shadow: 0 1px 3px 0 #e0e0e0;
+  box-shadow: 0 1px 3px 0 #e0e0e0;
+}
+.card .box img {
+  max-width: 100%;
+  height: auto;
+  -moz-border-radius: 6px 6px 0 0;
+  -webkit-border-radius: 6px;
+  border-radius: 6px 6px 0 0;
+}
+
+/* theme-card */
+.theme-card .box {
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+.theme-card .inner {
+  padding: 5px;
+}
+.theme-card .title {
+  color: #212121;
+  font-weight: bold;
+  font-size: 16px;
+}
+.theme-card .comment {
+  color: #757575;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.theme-card .more {
+  font-size: 12px;
+  text-align: right;
+  margin-top: 5px;
+}
+.theme-card .more a {
+  color: #e65100;
+}

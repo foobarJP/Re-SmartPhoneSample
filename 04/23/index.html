@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimal-ui initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>イメージ検索</title>
+  <link rel="stylesheet" href="../../common/css/reset.css">
+  <link rel="stylesheet" href="../../common/css/font-awesome.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Roboto:100italic,100,300italic,300,400italic,400,500italic,500,700italic,700,900italic,900" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>イメージ検索UI Sample</h1>
+<div class="image-search theme-image-search">
+  <div class="tag">
+    <h2>Tag :</h2>
+    <ul>
+      <li><a href="#all" class="is-active">All</a></li>
+      <li><a href="#pink">Pink</a></li>
+      <li><a href="#orange">Orange</a></li>
+      <li><a href="#gray">Gray</a></li>
+    </ul>
+  </div>
+
+  <div class="image-list">
+    <div>
+      <img src="http://www.placehold.it/640x300/f36c60/fff&text=Pink-01" data-search-tag="pink">
+    </div>
+    <div>
+      <img src="http://www.placehold.it/640x300/ffb74d/fff&text=Orange-01" data-search-tag="orange">
+    </div>
+    <div>
+      <img src="http://www.placehold.it/640x300/90a4ae/fff&text=Gray-01" data-search-tag="gray">
+    </div>
+    <div>
+      <img src="http://www.placehold.it/640x300/f36c60/fff&text=Pink-02" data-search-tag="pink">
+    </div>
+    <div>
+      <img src="http://www.placehold.it/640x300/90a4ae/fff&text=Gray-02" data-search-tag="gray">
+    </div>
+    <div>
+      <img src="http://www.placehold.it/640x300/90a4ae/fff&text=Gray-03" data-search-tag="gray">
+    </div>
+    <div>
+      <img src="http://www.placehold.it/640x300/ffb74d/fff&text=Orange-02" data-search-tag="orange">
+    </div>
+    <div>
+      <img src="http://www.placehold.it/640x300/90a4ae/fff&text=Gray-04" data-search-tag="gray">
+    </div>
+    <div>
+      <img src="http://www.placehold.it/640x300/ffb74d/fff&text=Orange-03" data-search-tag="orange">
+    </div>
+    <div>
+      <img src="http://www.placehold.it/640x300/f36c60/fff&text=Pink-03" data-search-tag="pink">
+    </div>
+  </div>
+</div>
+<script src="../../common/js/jquery-2.1.1.min.js"></script>
+<script>
+  $(function(){
+    $(".image-search .tag a").on("click", function(){
+      $(".image-search .tag a").removeClass("is-active");
+      $(this).addClass("is-active");
+      var tag = $(this).attr("href").replace("#", "");
+      $(".image-search .image-list img").hide();
+      if(tag == "all"){
+        $(".image-search .image-list img").show();
+      }else{
+        $(".image-search .image-list [data-search-tag='"+ tag +"']").show();
+      }
+      return false;
+    });
+  });
+</script>
+</body>
+</html>

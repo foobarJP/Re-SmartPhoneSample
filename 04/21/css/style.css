@@ -1,0 +1,131 @@
+@charset 'utf-8';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto", "メイリオ", "Meiryo", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 1.5;
+  margin: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.message-list {}
+
+.message-list li {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.message-list li:first-child {
+  border-top: 1px solid #e0e0e0;
+}
+
+.message-list li span {
+  padding: 10px;
+  line-height: 1.5;
+  display: block;
+  flex: auto;
+}
+
+.message-text {
+  width: 78%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-right: 1px solid #e0e0e0;
+}
+
+.message-btn {
+  width: 50px;
+  width: 21%;
+  color: #f36c60;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Modal Window */
+.modal-overlay,
+.modal {
+  display: none;
+}
+
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .6;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.modal {
+  width: 90%;
+  background-color: #fafafa;
+  position: fixed;
+  top: 30px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 0 0;
+  border-radius: 2px;
+}
+
+.modal-contents {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.modal-btn-groupe {
+  text-align: center;
+  font-size: 14px;
+  padding: 15px 0;
+  border-top: 1px solid #e0e0e0;
+  letter-spacing: -.40em;
+}
+
+.modal-btn-groupe li {
+  display: inline-block;
+  letter-spacing: normal;
+  width: 100px;
+  border-radius: 2px;
+  border: 1px solid #e0e0e0;
+}
+
+.modal-btn-groupe li:first-child {
+  margin: 0 15px 0 0;
+}
+
+.modal-btn-groupe li a {
+  display: block;
+  padding: 8px 0;
+}
+
+
+/* Modal Window close button */
+.modal-close {
+  background-color: #eceff1;
+  border: 1px solid #e0e0e0;
+  color: #757575;
+}
+
+.modal-delete {
+  background-color: #4db6ac;
+  border: 1px solid #00897b;
+  color: #fafafa;
+}

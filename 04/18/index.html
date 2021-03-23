@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimal-ui initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>タブパネル</title>
+  <link rel="stylesheet" href="../../common/css/reset.css">
+  <link rel="stylesheet" href="../../common/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+  <h1>タブパネルUI Sample</h1>
+  <div class="tabpanel theme-tabpanel">
+    <ul>
+      <li class="is-active"><a href="#tab1">タブ1</a></li>
+      <li><a href="#tab2">タブ2</a></li>
+      <li><a href="#tab3">タブ3</a></li>
+      <li><a href="#tab4">タブ4</a></li>
+    </ul>
+    <div id="tab1"><img src="http://www.placehold.it/100x100"><p>tab1 tab1 tab1 tab1 tab1 tab1 tab1 tab1 tab1 tab1 tab1 tab1</p></div>
+    <div id="tab2"><p>tab2 tab2 tab2 tab2 tab2 tab2 tab2 tab2 tab2 tab2 tab2 tab2 tab2 tab2 tab2 tab2</p></div>
+    <div id="tab3"><p>tab3 tab3 tab3 tab3 tab3 tab3 tab3 tab3 tab3</p></div>
+    <div id="tab4"><img src="http://www.placehold.it/80x120"><p>tab4 tab4 tab4 tab4 tab4 tab4 tab4 tab4 tab4 tab4 tab4 tab4 tab4 tab4 tab4 tab4 tab4 tab4 tab4 tab4 tab4 tab4</p></div>
+  </div>
+<script src="../../common/js/jquery-2.1.1.min.js"></script>
+<script>
+  $(function(){
+    $(".tabpanel a").on("click", function(){
+      var id = $(this).attr("href");
+      $(".tabpanel div").hide();
+      $(".tabpanel").find(id).show();
+      $(".tabpanel li").removeClass("is-active");
+      $(this).parent().addClass("is-active");
+      return false;
+    });
+  });
+</script>
+</body>
+</html>

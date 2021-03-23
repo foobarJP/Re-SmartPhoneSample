@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ポップアップムービー サンプル</title>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../../common/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../common/css/reset.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <div class="container">
+        <h1 class="theme-headline">ポップアップムービー sample</h1>
+        <p class="theme-sub-description">YouTubeに一番最初にアップされた動画。</p>
+        <button id="js-startbtn" class="button">動画を再生</button>
+        <div class="modal is-hide">
+            <iframe width="280" height="210" src="https://www.youtube.com/embed/jNQXAC9IVRw" frameborder="0" allowfullscreen></iframe>
+            <i class="modal-close js-modal-close fa fa-times"></i>
+        </div>
+    </div>
+    <script src="../../common/js/jquery-2.1.1.min.js"></script>
+    <script>
+        $(function () {
+            var $modal     = $('.modal');
+            var HIDE_CLASS = 'is-hide';
+
+            $('#js-startbtn').on('click', function () {
+                $modal.removeClass(HIDE_CLASS);
+            });
+
+            $('.js-modal-close').on('click', function () {
+                $modal.addClass(HIDE_CLASS);
+            });
+        });
+    </script>
+    </body>
+</html>

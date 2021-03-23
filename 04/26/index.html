@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>マップ</title>
+    <link href="//fonts.googleapis.com/css?family=Roboto:100italic,100,300italic,300,400italic,400,500italic,500,700italic,700,900italic,900" rel="stylesheet" type="text/css">
+    <link href="../../common/css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB3yfRrfs1BtKNCISSVyqH3PaVbPwvaudw&sensor=false">
+    </script>
+   <script type="text/javascript">
+      window.addEventListener('load', createMap, false);
+      function createMap() {
+        var latlng = new google.maps.LatLng(35.710063, 139.8107);
+
+        var iconInfo = {
+            url: 'icon.png',
+            scaledSize: new google.maps.Size(50, 50)
+        };
+
+        var mapOptions = {
+          center: latlng,
+          zoom: 16,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var mapObj = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+
+
+        var marker = new google.maps.Marker({
+            position: latlng,
+            map: mapObj,
+            title: "東京スカイツリー",
+            icon: iconInfo
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <h1>マップ Sample</h1>
+
+    <div id="map-canvas"></div>
+    <p><a href="http://maps.google.com/maps?q=35.710063,139.8107" class="btn-app">アプリを起動する</a></p>
+
+  </body>
+</html>
+

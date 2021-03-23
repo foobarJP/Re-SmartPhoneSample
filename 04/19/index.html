@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../../common/css/reset.css">
+	<link rel="stylesheet" href="../../common/css/font-awesome.min.css">
+	<link rel="stylesheet" href="slick.css"/>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>カルーセル Sample</h1>
+<div class="carousel-ui">
+	<div><img src="sample_1.jpg" /></div>
+	<div><img src="sample_2.jpg" /></div>
+	<div><img src="sample_3.jpg" /></div>
+</div>
+
+
+<script src="../../common/js/jquery-2.1.1.min.js"></script>
+<script src="slick.min.js"></script>
+<script>
+$(function() {
+	$('.carousel-ui').slick();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimal-ui initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>フォトギャラリー</title>
+  <link rel="stylesheet" href="../../common/css/reset.css">
+  <link rel="stylesheet" href="../../common/css/font-awesome.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Roboto:100italic,100,300italic,300,400italic,400,500italic,500,700italic,700,900italic,900" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>フォトギャラリーUI Sample</h1>
+<div class="photo-gallery theme-photo-gallery">
+  <div class="photo-wrapper">
+    <div class="photo-list">
+      <img src="image/sample_01.jpg" alt="">
+      <div class="photo-share table">
+        <a href=""><i class="fa fa-twitter"></i></a>
+        <a href=""><i class="fa fa-facebook"></i></a>
+      </div>
+    </div>
+    <div class="photo-list">
+      <img src="image/sample_02.jpg" alt="">
+      <div class="photo-share table">
+        <a href=""><i class="fa fa-twitter"></i></a>
+        <a href=""><i class="fa fa-facebook"></i></a>
+      </div>
+    </div>
+    <div class="photo-list">
+      <img src="image/sample_03.jpg" alt="">
+      <div class="photo-share table">
+        <a href=""><i class="fa fa-twitter"></i></a>
+        <a href=""><i class="fa fa-facebook"></i></a>
+      </div>
+    </div>
+  </div>
+  <ul class="photo-nav table">
+    <li><i class="fa fa-arrow-left prev"></i></li>
+    <li><i class="fa fa-arrow-right next"></i></li>
+  </ul>
+</div>
+<script src="../../common/js/jquery-2.1.1.min.js"></script>
+<script>
+  $(function(){
+    $(window).load(function(){
+      var imgHei = $(".photo-list:first").height();
+      $(".photo-wrapper").height(imgHei);
+    });
+
+    var i = 0,
+        listNum = $(".photo-list").length;
+    $(".photo-nav .next, .photo-nav .prev").on("click", function(e){
+      if($(e.target).hasClass("next")){
+        i++;
+      }else{
+        i--;
+      }
+
+      if(i == listNum){i = 0;}
+      if(i < 0){i = (listNum-1);}
+
+      var $photo = $(".photo-list");
+      $photo.each(function(){
+        if($(this).css("display") == "block"){
+          $(this).stop().fadeOut("slow", function(){
+            $photo.eq(i).stop().fadeIn("slow");
+          });
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>

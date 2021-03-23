@@ -1,0 +1,39 @@
+body {
+  background: #eceff1;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 1.5;
+  margin: 15px;
+}
+
+.horizontal-scroll {
+  padding: 15px 0;
+  overflow-x: scroll;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.horizontal-scroll .scroll-wrap {
+  height: 100%;
+}
+.horizontal-scroll .scroll-wrap .contents {
+  float: left;
+  width: 110px;
+  padding: 10px;
+  margin: 0 10px;
+  background: #fff;
+  -moz-box-shadow: 0 0 10px 1px #e0e0e0;
+  -webkit-box-shadow: 0 0 10px 1px #e0e0e0;
+  box-shadow: 0 0 10px 1px #e0e0e0;
+}
+
+/* theme-horizontal-scroll */
+.theme-horizontal-scroll .scroll-wrap img {
+  max-width: 100%;
+  height: auto;
+}
+.theme-horizontal-scroll .scroll-wrap .contents p {
+  font-size: 14px;
+  line-height: 1.5;
+}

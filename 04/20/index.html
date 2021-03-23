@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimal-ui initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>カード</title>
+  <link rel="stylesheet" href="../../common/css/reset.css">
+  <link rel="stylesheet" href="../../common/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+  <h1>カードUI Sample</h1>
+  <section>
+  </section>
+<div class="card theme-card">
+  <div class="box">
+    <img src="http://www.placehold.it/320x160">
+    <div class="inner">
+      <div class="js-heightLine-1">
+        <p class="title">タイトル</p>
+        <p class="comment">コメント コメント コメント コメント コメント コメント コメント</p>
+      </div>
+      <p class="more"><a href="#">続きを見る</a></p>
+    </div>
+  </div>
+  <div class="box">
+    <img src="http://www.placehold.it/320x160">
+    <div class="inner">
+      <div class="js-heightLine-1">
+        <p class="title">タイトル</p>
+        <p class="comment">コメント コメント コメント コメント コメント</p>
+      </div>
+      <p class="more"><a href="#">続きを見る</a></p>
+    </div>
+  </div>
+  <div class="box">
+    <img src="http://www.placehold.it/320x160">
+    <div class="inner">
+      <div class="js-heightLine-2">
+        <p class="title">タイトル</p>
+        <p class="comment">コメント コメント コメント コメント コメント コメント コメント コメント コメント コメント</p>
+      </div>
+      <p class="more"><a href="#">続きを見る</a></p>
+    </div>
+  </div>
+  <div class="box">
+    <img src="http://www.placehold.it/320x160">
+    <div class="inner">
+      <div class="js-heightLine-2">
+        <p class="title">タイトル</p>
+        <p class="comment">コメント コメント コメント コメント コメント コメント コメント コメント</p>
+      </div>
+      <p class="more"><a href="#">続きを見る</a></p>
+    </div>
+  </div>
+</div>
+<script src="../../common/js/jquery-2.1.1.min.js"></script>
+<script src="./jquery.heightLine.js"></script>
+<script>
+  $(function(){
+    var column = 2,
+        roop = Math.ceil($(".card .box").length / column),
+        i;
+    for(i = 0;i < roop;i++){
+      $(".js-heightLine-" + (i+1)).heightLine();
+    }
+  });
+</script>
+</body>
+</html>
