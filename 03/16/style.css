@@ -1,0 +1,29 @@
+body {
+	font-family: Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+h1 {
+	font-size: 32px;
+	line-height: 1.5;
+	margin: 15px;
+}
+
+h2 {
+	font-size: 26px;
+	line-height: 1.5;
+	margin: 15px;
+	border-bottom: 1px solid #90a4ae;
+	color: #4fc3f7;
+}
+
+p {
+	font-size: 14px;
+	line-height: 1.5;
+	margin: 15px;
+}
+
+.next-navi {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
