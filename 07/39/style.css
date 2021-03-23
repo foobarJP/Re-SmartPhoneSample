@@ -1,0 +1,53 @@
+body {
+  font-family: Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.toggle {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  margin: 32px;
+  background-color: transparent;
+  border: none;
+}
+.bar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #757575;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+}
+.bar-01 {
+  top: 0;
+}
+.bar-02 {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.bar-03 {
+  bottom: 0;
+}
+
+.toggle.is--active .bar {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.toggle.is--active .bar-02 {
+  display: none;
+}
+
+.toggle.is--active .bar-03 {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.toggle.is--active .bar-01 {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}

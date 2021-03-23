@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width">
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../../common/css/reset.css">
+  <link rel="stylesheet" href="../../common/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form action="./" class="form">
+  <ul>
+    <li>
+      <label class="form-title" for="name">名前</label>
+      <input type="text" name="name" id="name" class="text-field">
+    </li>
+    <li>
+      <label class="form-title" for="email">メールアドレス</label>
+      <input type="email" name="email" id="email" class="text-field">
+    </li>
+    <li>
+      <fieldset>
+        <legend class="form-title">性別</legend>
+        <label class="label-gender"><input type="radio" name="gender" id="male"> 男</label>
+        <label class="label-gender"><input type="radio" name="gender" id="female"> 女</label>
+      </fieldset>
+    </li>
+    <li>
+      <label class="form-title" for="language">言語</label>
+      <select name="language" id="language">
+        <option value="日本語">日本語</option>
+        <option value="英語">英語</option>
+      </select>
+    </li>
+    <li>
+      <label class="form-title" for="tel">電話番号</label>
+      <input type="tel" name="tel" id="tel" class="text-field">
+    </li>
+    <li>
+      <label class="form-title" for="content">内容</label>
+      <textarea name="content" id="content" rows="4" class="text-field"></textarea>
+    </li>
+  </ul>
+  <input type="submit" value="送信" class="form-submit">
+</form>
+
+<script src="../../common/js/jquery-2.1.1.min.js"></script>
+<script>
+$(function() {
+
+});
+</script>
+</body>
+</html>

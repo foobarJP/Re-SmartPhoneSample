@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width">
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../../common/css/reset.css">
+  <link rel="stylesheet" href="../../common/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button class="toggle">
+  <span class="bar bar-01"></span>
+  <span class="bar bar-02"></span>
+  <span class="bar bar-03"></span>
+</button>
+
+<script src="../../common/js/jquery-2.1.1.min.js"></script>
+<script>
+$(function() {
+  var flag = false;
+  $('.toggle').on('click', function() {
+    if(flag) {
+      $(this).removeClass('is--active');
+    } else {
+      $(this).addClass('is--active');
+    }
+    flag = !flag;
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>カウンター付きテキストエリア サンプル</title>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../../common/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../common/css/reset.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 class="theme-headline">カウンター付きテキストエリア sample</h1>
+        <div class="container">
+            <form class="form">
+                <div class="form-textarea">
+                    <textarea id="form-message"></textarea>
+                </div>
+                <div class="form-inner is-align-right">
+                    <span id="counter"></span>文字
+                </div>
+                <div class="form-button">
+                    <button type="submit"><i class="fa fa-send"></i>送信</button>
+                </div>
+            </form>
+        </div>
+        <script src="../../common/js/jquery-2.1.1.min.js"></script>
+        <script>
+        $(function () {
+            var MAX_LENGTH = 140;
+
+            $('#form-message').on('keyup', function () {
+                var text = $(this).val();
+                renderCount(text.length);
+            });
+
+            renderCount(0);
+
+            function renderCount(currentLength) {
+                $('#counter').text(MAX_LENGTH - currentLength);
+            }
+        });
+        </script>
+    </body>
+</html>
