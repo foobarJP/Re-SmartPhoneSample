@@ -1,0 +1,56 @@
+body {
+  font-family: "Roboto";
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 1.5;
+  margin: 15px 15px 30px;
+}
+
+.tooltip .tooltip-action {
+  position: relative;
+}
+.tooltip .tooltip-action:before {
+  content: attr(title);
+  display: none;
+  color: #fff;
+  padding: 3px 10px;
+  min-width: 90px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background: #263238;
+  position: absolute;
+  bottom: 1.6em;
+  left: 0;
+}
+.tooltip .tooltip-action:after {
+  content: "";
+  display: none;
+  border-style: solid;
+  border-width: 10px;
+  border-color: #263238 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  position: absolute;
+  bottom: 0.5em;
+  left: 0;
+}
+.tooltip .tooltip-action.is-active:before {
+  display: block;
+}
+.tooltip .tooltip-action.is-active:after {
+  display: inline-block;
+}
+
+/* theme-tooltip */
+.theme-tooltip {
+  margin: 15px;
+}
+.theme-tooltip p {
+  color: #757575;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.theme-tooltip a {
+  color: #4db6ac;
+}
