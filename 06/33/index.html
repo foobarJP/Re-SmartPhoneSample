@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width">
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../../common/css/reset.css">
+  <link rel="stylesheet" href="../../common/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<p>Progress要素</p>
+
+<progress value="50" max="100"></progress>
+
+<p>SVG プログレスバー</p>
+<svg viewPort="0 0 200 3" width="200" height="1" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path class="progress-bar" d="M 0 1 L 200 1" stroke="#e0e0e0" />
+  <path id="demo" class="progress-bar" d="M 0 1 L 200 1" stroke="#d9534f" stroke-dasharray="200" style="stroke-dashoffset: 200px;" />
+</svg>
+
+<p>SVG プログレスサークル</p>
+
+<svg id="progress-circle" width="200" height="200" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <text id="per" x="50%" y="55%">0%</text>
+  <circle r="90" cx="100" cy="100" transform="rotate(-90, 100, 100)" stroke-dasharray="566" stroke="#e0e0e0"></circle>
+  <circle id="demo2" r="90" cx="100" cy="100" transform="rotate(-90, 100, 100)" stroke-dasharray="566" stroke="#f36c60" style="stroke-dashoffset: 566;"></circle>
+</svg>
+
+
+
+<script src="../../common/js/jquery-2.1.1.min.js"></script>
+<script>
+$(function() {
+  var i = 0;
+  var pathLength = 200;
+
+  var loading = setInterval(function() {
+    var val = pathLength * (1 - 0.1 * i);
+    $('#demo').css({ strokeDashoffset: val});
+    i++;
+
+    if(10 < i) {
+      clearInterval(loading);
+    }
+   }, 1000);
+});
+
+$(function() {
+  var i = 1;
+  var pathLength = Math.PI*(90*2);
+
+  var loading = setInterval(function() {
+    var val = pathLength * (1 - 0.1 * i);
+    $('#demo2').css({ strokeDashoffset: val});
+    $('#per').text((i * 10) + '%');
+    i++;
+
+    if(10 < i) {
+      clearInterval(loading);
+    }
+   }, 1400);
+});
+</script>
+</body>
+</html>

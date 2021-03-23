@@ -1,0 +1,61 @@
+body {
+  margin: 20px 0;
+  text-align: center;
+  font-family: Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+p {
+  margin-bottom: 10px;
+}
+p ~ p {
+  margin-top: 80px;
+}
+
+.original {
+  height: 10px;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+.original::-webkit-progress-bar {
+  background: transparent;
+}
+.original::-webkit-progress-value {
+  background: #f36c60;
+}
+.original::-moz-progress-bar {
+  background: #f36c60;
+}
+
+.d {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background-color: #000;
+}
+.d::-webkit-progress-bar {
+  background: transparent;
+}
+.d .bar {
+  display: block;
+  height: 10px;
+  background-color: #f36c60;
+}
+
+#per {
+  fill: #757575;
+}
+.progress-bar {
+  stroke-width: 3;
+}
+
+#progress-circle circle {
+  fill: transparent;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+  stroke-width: 1em;
+}
+#progress-circle #per {
+  font-size: 40px;
+  text-anchor: middle;
+}

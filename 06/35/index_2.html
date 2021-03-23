@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../../common/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../common/css/reset.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 class="theme-headline">グラフ カスタマイズ例 sample</h1>
+        <div id="chart_div"></div>
+        <script src="https://www.google.com/jsapi"></script>
+        <script>
+        google.load('visualization', '1.0', {'packages':['corechart']});
+
+        // Google Visualization API がロードされたら実行する関数を登録drawChart
+        google.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            // 描画に使いたいdataを管理するオブジェクトを作成
+            var data1 = new google.visualization.DataTable();
+
+            // dataを追加していく
+            data1.addColumn('string', 'Topping');
+            data1.addColumn('number', 'Slices');
+            data1.addRows([
+                ['項目1', 6],
+                ['項目2', 3],
+                ['項目3', 2],
+                ['項目4', 1],
+                ['その他', 2]
+            ]);
+
+            // 円グラフを描画するためのオプションを指定する。
+            var options = {
+                title: 'グラフのサンプル',
+                width : 400,
+                height: 300,
+                colors: ['#01579b', '#039be5', '#4fc3f7', '#e1f5fe', '#eceff1'],
+                is3D: true
+            };
+
+            // google.visualization.PieChartメソッドに`#chart_div`要素を渡します。
+            // drawメソッドに先ほど作成した、data, optionsを渡すことで円グラフが描画されます。
+            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+            chart.draw(data1, options);
+        }
+        </script>
+    </body>
+</html>

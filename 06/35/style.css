@@ -1,0 +1,11 @@
+
+body {
+    -webkit-text-size-adjust: 100%;
+    font-family: Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+}
+.theme-headline {
+    font-size: 32px;
+    line-height: 1.5;
+    margin: 15px;
+}

@@ -1,0 +1,39 @@
+@charset 'utf-8';
+
+body {
+  font-family: "Roboto", "メイリオ", "Meiryo", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 1.5;
+  margin: 15px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-box {
+	position: relative;
+	width: 300px;
+	height: 228px;
+	margin: 0 auto;
+	background-color: #ddd;
+}
+
+.image-box .loading {
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.image {
+	opacity: 0;
+}
